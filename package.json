@@ -1,0 +1,17 @@
+{
+	"name": "ubigraph", 
+	"version": "0.99",
+	"author": {
+	        "name": "Joshua Marshall Moore",
+		"email": "joshua.marshall.moore@gmail.com"
+	},
+	"files": ["src/ubigraph.coffee", "README", "ubigraph.js"],
+	"main": "ubigraph.js",
+	"repository": {
+	        "type": "git",
+	        "url": "https://lowerkey@github.com/lowerkey/node-ubigraph.git"
+	},
+	"dependencies": {
+	        "xmlrpc": "0.9.4"
+	}
+}
