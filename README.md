@@ -7,9 +7,8 @@ parameter indicates an error if one occured, and value is the value returned by
 the server.
 
 0. Compilation:
-    `coffee -c -b ubigraph.coffee;`
-    Edit resulting ubigraph.js, appending `exports.Ubigraph = Ubigraph` to the file.
-
+	Just include the ubigraph.js file.
+	
 1. The constructor:
     Currently does not receive any parameters. Creates and stores the 
     connection to the ubigraph server. All subsequent functions are members of 
