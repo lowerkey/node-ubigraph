@@ -28,7 +28,7 @@ Ubigraph.prototype.newVertex = function(callback){
 };
 
 Ubigraph.prototype.newVertexWithID = function(id, callback){
-	this.client.methodCall('ubigraph.new_vertex_w_id', [id], function(error, value){
+	this.client.methodCall('ubigraph.new_vertex_w_id', [parseInt(id)], function(error, value){
 		if(error)
 			console.log('ubigraph.new_vertex_w_id error: ' + error);
 		if(callback)
@@ -37,7 +37,7 @@ Ubigraph.prototype.newVertexWithID = function(id, callback){
 };
 
 Ubigraph.prototype.newEdge = function(fromVertexID, toVertexID, callback){
-	this.client.methodCall('ubigraph.new_edge', [fromVertexID, toVertexID], function(error, value){
+	this.client.methodCall('ubigraph.new_edge', [parseInt(fromVertexID), parseInt(toVertexID)], function(error, value){
 		if(error)
 			console.log('ubigraph.new_edge error: ');
 		if(callback)
@@ -46,7 +46,7 @@ Ubigraph.prototype.newEdge = function(fromVertexID, toVertexID, callback){
 };
 
 Ubigraph.prototype.newEdgeWithID = function(fromVertexID, toVertexID, id, callback){
-	this.client.methodCall('ubigraph.new_edge_w_id', [id, fromVertexID, toVertexID], function(error, value){
+	this.client.methodCall('ubigraph.new_edge_w_id', [parseInt(id), fromVertexID, toVertexID], function(error, value){
 		if(error)
 			console.log('ubigraph.new_edge_w_id error: ' + error);
 		if(callback)
@@ -55,7 +55,7 @@ Ubigraph.prototype.newEdgeWithID = function(fromVertexID, toVertexID, id, callba
 };
 
 Ubigraph.prototype.removeVertex = function(vertexID, callback){
-	this.client.methodCall('ubigraph.remove_vertex', [vertexID], function(error, value){
+	this.client.methodCall('ubigraph.remove_vertex', [parseInt(vertexID)], function(error, value){
 		if(error)
 			console.log('ubigraph.remove_vertex error: ' + error);
 		if(callback)
@@ -64,7 +64,7 @@ Ubigraph.prototype.removeVertex = function(vertexID, callback){
 };
 
 Ubigraph.prototype.removeEdge = function(edgeID, callback){
-	this.client.methodCall('ubigraph.remove_edge', [edgeID], function(error, value){
+	this.client.methodCall('ubigraph.remove_edge', [parseInt(edgeID)], function(error, value){
 		if(error)
 			console.log('ubigraph.remove_edge error: ' + error);
 		if(callback)
@@ -73,7 +73,7 @@ Ubigraph.prototype.removeEdge = function(edgeID, callback){
 };
 
 Ubigraph.prototype.setVertexAttribute = function(vertexID, property, value, callback){
-	this.client.methodCall('ubigraph.set_vertex_attribute', [vertexID, property, value], function(error, value){
+	this.client.methodCall('ubigraph.set_vertex_attribute', [parseInt(vertexID), property, value], function(error, value){
 		if(error)
 			console.log('ubigraph.set_vertex_attribute error: ' + error);
 		if(callback)
@@ -82,7 +82,7 @@ Ubigraph.prototype.setVertexAttribute = function(vertexID, property, value, call
 };
 
 Ubigraph.prototype.setEdgeAttribute = function(edgeID, property, value, callback){
-	this.client.methodCall('ubigraph.set_edge_attribute', [edgeID, property, value], function(error, value){
+	this.client.methodCall('ubigraph.set_edge_attribute', [parseInt(edgeID), property, value], function(error, value){
 		if(error)
 			console.log('ubigraph.set_edge_attribute error: ' + error);
 		if(callback)
