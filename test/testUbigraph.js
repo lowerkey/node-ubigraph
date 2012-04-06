@@ -2,7 +2,7 @@ function justLogErrors(error, value){
 	console.log(error);
 }
 
-var ubigraph = require(__dirname + '/../ubigraph2.js');
+var ubigraph = require(__dirname + '/../ubigraph.js');
 var u = new ubigraph.Ubigraph();
 u.clear();
 
